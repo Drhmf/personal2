@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
             min-height: 100vh;
             display: flex;
@@ -22,18 +22,16 @@
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             background: white;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
+            margin: 20px;
         }
 
         .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
             padding: 40px;
             text-align: center;
         }
@@ -42,39 +40,49 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            object-fit: cover;
             border: 5px solid #E3F2FD;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
-            color: #37474F;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 32px;
+            color: #000000;
+            margin-bottom: 15px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
         }
 
         .master-title {
-            color: #1976D2;
+            font-size: 20px;
+            color: #000000;
             font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 5px;
+            display: block;
+            margin: 10px 0;
         }
 
         .profession {
-            color: #546E7A;
-            font-size: 1.2em;
+            font-size: 18px;
+            color: #000000;
             margin-bottom: 20px;
+            display: block;
+            width: 100%;
         }
 
         .description {
-            color: #455A64;
+            font-size: 16px;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            color: #000000;
             background: #F5F9FF;
+            padding: 20px;
             border-radius: 10px;
+            margin: 20px 0;
+            display: block;
+            width: 100%;
+            text-align: left;
         }
 
         @media (max-width: 768px) {
@@ -82,17 +90,17 @@
                 padding: 20px;
             }
 
-            h1 {
-                font-size: 2em;
-            }
-
             .profile-img {
                 width: 150px;
                 height: 150px;
             }
 
+            h1 {
+                font-size: 24px;
+            }
+
             .description {
-                padding: 15px;
+                font-size: 14px;
             }
         }
     </style>
@@ -103,7 +111,7 @@
             <img src="https://i.ibb.co/Yt2mMzX/Captura-de-pantalla-2024-11-14-195329.png" alt="Héctor Miguel Feliz" class="profile-img">
             <h1>Héctor Miguel Feliz Feliz, M.A.</h1>
             <div class="profession">
-                Licenciado en Informática<br>
+                Licenciado en Informática
                 <span class="master-title">Maestría en Ciberseguridad</span>
             </div>
             <div class="description">
