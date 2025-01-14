@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héctor Miguel Feliz - Portfolio</title>
+    <title>Lic. Hector Miguel Feliz Feliz, M.A.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <style>
+        :root {
+            --primary-color: #e9d5ff;
+            --secondary-color: #c084fc;
+            --text-color: #334155;
+            --accent-color: #7c3aed;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,112 +20,182 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--primary-color), white);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
 
         .container {
-            width: 100%;
             max-width: 1200px;
-            background: white;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 20px;
-        }
-
-        .content {
-            width: 100%;
-            padding: 40px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
         }
 
-        .profile-img {
+        .profile-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 5px solid #E3F2FD;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 1.5rem;
+            border: 5px solid var(--secondary-color);
+            overflow: hidden; /* Añadido para asegurar que la imagen respete el borde circular */
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
         }
 
         h1 {
-            font-size: 32px;
-            color: #000000;
-            margin-bottom: 15px;
-            font-weight: bold;
-            display: block;
-            width: 100%;
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .master-title {
-            font-size: 20px;
-            color: #000000;
-            font-weight: bold;
-            display: block;
-            margin: 10px 0;
+        h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .profession {
-            font-size: 18px;
-            color: #000000;
-            margin-bottom: 20px;
-            display: block;
-            width: 100%;
+        .credentials {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--primary-color);
+            border-radius: 10px;
         }
 
         .description {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #000000;
-            background: #F5F9FF;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: block;
-            width: 100%;
-            text-align: left;
+            max-width: 800px;
+            margin: 2rem auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
-            .content {
-                padding: 20px;
+            .container {
+                padding: 1rem;
             }
 
-            .profile-img {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-image {
                 width: 150px;
                 height: 150px;
             }
 
-            h1 {
-                font-size: 24px;
-            }
-
             .description {
-                font-size: 14px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="container">
-        <div class="content">
-            <img src="https://i.ibb.co/Yt2mMzX/Captura-de-pantalla-2024-11-14-195329.png" alt="Héctor Miguel Feliz" class="profile-img">
-            <h1>Héctor Miguel Feliz Feliz, M.A.</h1>
-            <div class="profession">
-                Licenciado en Informática
-                <span class="master-title">Maestría en Ciberseguridad</span>
+        <div class="profile-card">
+            <div class="profile-image">
+                <!-- Reemplaza el "URL_DE_TU_IMAGEN" con el enlace real de tu imagen -->
+                <img src="https://i.ibb.co/Yt2mMzX/Captura-de-pantalla-2024-11-14-195329.png" alt="Hector Miguel Feliz Feliz">
+            </div>
+            <h1>Lic. Hector Miguel Feliz Feliz, M.A.</h1>
+            <div class="credentials">
+                <h2>Profesión</h2>
+                <p>Licenciado en Informática</p>
+                
+                <h2>Especialización</h2>
+                <p>Maestría en Ciberseguridad</p>
             </div>
             <div class="description">
-                Profesional apasionado por la tecnología y la seguridad informática, especializado en el desarrollo de soluciones web seguras y escalables. Con una sólida formación en Informática y una Maestría en Ciberseguridad, combino mis conocimientos técnicos con las mejores prácticas de desarrollo web para crear experiencias digitales innovadoras y protegidas. Mi enfoque se centra en la implementación de tecnologías modernas y estándares de seguridad actualizados para garantizar soluciones robustas y confiables.
+                <p>Bienvenidos al curso de Diseño de Páginas Web 1. Como su profesor, combino mi experiencia en Informática con mi especialización en Ciberseguridad para ofrecerles una perspectiva integral del desarrollo web moderno. Mi enfoque educativo se centra en las mejores prácticas de diseño web, incorporando aspectos fundamentales de seguridad desde las etapas iniciales del desarrollo.</p>
+                <p>Mi formación académica y experiencia profesional me permiten guiarlos no solo en la creación de sitios web atractivos y funcionales, sino también en la implementación de medidas de seguridad esenciales para el desarrollo web actual.</p>
             </div>
         </div>
     </div>
+
+    <script>
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#c084fc"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#c084fc",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
